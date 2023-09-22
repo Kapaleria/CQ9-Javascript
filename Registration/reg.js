@@ -1,5 +1,19 @@
 //capture user input(name, email and location)
 
+//const validateForm =>(){
+//}
+
+// function validateForm(){
+    
+//         if(
+//             email=="" || name=="" || location==""
+//         ){
+//                 console.log("fields are empty")
+//         }
+//         else{
+//                 console.log("fields have content")
+//         }
+// }
 
 function register(event){
 //querying an element
@@ -7,12 +21,17 @@ var name =document.querySelector("#name").value
 var email =document.querySelector("#email").value
 var location =document.querySelector("#location").value
 
-//display results
+if(name=="" || email=="" || location ==""){
+    alert("All these fields are required")
+}
+
+else{
+    //display results
 r_name.innerHTML=name;
 r_email.innerHTML=email;
 r_location.innerHTML=location;
-
 event.preventDefault()
+}
 
 }
 
